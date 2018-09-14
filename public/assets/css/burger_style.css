@@ -1,0 +1,39 @@
+body {
+    background-color: red;
+    font-family: Helvetica, sans-serif
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    padding: 5px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+h2 {
+    font-family: 'Crete Round', serif;
+    font-size: 24px;
+    padding: 5px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+nav {
+    background-color: rgb(255, 187, 0);
+}
+
+.btn {
+    background-color: rgb(255, 187, 0);
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(255, 187, 0);
+}
+
+#devourButton {
+    padding-bottom: 5px;
+    font-family: 'Luckiest Guy', cursive;
+
+}
