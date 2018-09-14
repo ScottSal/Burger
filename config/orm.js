@@ -1,5 +1,5 @@
 //importing connection
-var connection = require("./connection.js");
+var connection = require("./connection");
 //create object with methods that collects data, creates new data, updates data
 //orm.all method: 
 //creates connection query that is selecting everything from table input 
