@@ -5,7 +5,6 @@ var connection = require("./connection.js");
 //creates connection query that is selecting everything from table input 
 //then uses callback to pass result into .js
 //add in update method: 
-//
 var orm = {
     all: function(tableInput, cb){
         connection.query('SELECT * FROM ' +tableInput+ ';',
