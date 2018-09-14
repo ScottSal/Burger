@@ -1,0 +1,64 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper brand text-center">
+            <h1>Eat Da Burger!!!</h1>
+        </div>
+        
+    </nav>
+</div> 
+
+<div class="container">
+    <div class="row"></div>
+    
+    <div class="row">
+        <div class="col-sm-4 task">
+            <div class="row">
+                {{#each burgerData}}
+                    {{#unless this.devoured}}
+                <div>
+                    <h2>{{this.burger_name}}</h2>
+                </div>
+                <div class="col-12 input-field">
+                    <form method="POST" action="/burgers/update?_method=PUT">
+                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                        <button type="submit" class="btn" id="devourButton">DEVOUR IT</button>
+                        <hr>
+                    </form>
+                </div>
+                
+                {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="col-sm-4 burgerImg">
+            <img src="/public/assets/img/hamburger.png" width="100%" border="5" id="burgerImg">
+        </div>
+
+        <div class="col-sm-4">
+                {{#each burgerData}}
+                    {{#if this.devoured}}
+                    <h2>{{this.burger_name}}</h2>
+                    {{/if}}
+                {{/each}}
+        </div>
+    
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center enter_section">
+                <form method="POST" action="/burgers/create">
+                    <input type="text" name="burger_name"  class=
+                    "form-control" value="" id="enter-text">
+                    
+                    <p>Enter in a burger you would like to eat!</p>
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+
+</div>
